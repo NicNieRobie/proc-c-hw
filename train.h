@@ -1,10 +1,12 @@
 #ifndef PROCC_TRAIN_H_
 #define PROCC_TRAIN_H_
 
-struct train {
+typedef struct train {
     int car_amount;
-};
+} train_st;
 
-double TimeToDest(const struct train *t);
+void TrainIn(train_st *train, const FILE *ifstream);
+
+void TrainOut(const train_st *train, const double timeToDest, const FILE *ofstream);
 
 #endif

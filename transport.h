@@ -7,22 +7,21 @@
 #include "ship.h"
 #include "train.h"
 
-struct transport {
-    enum transportType {PLANE, SHIP, TRAIN}; 
-    enum transportType tp;
+typedef struct transport {
+    enum transport_type_et {PLANE, SHIP, TRAIN} transport_type;
     int speed;
     double dest_distance;
     union {
-        struct plane p;
-        struct ship s;
-        struct train t;
+        plane_st p;
+        ship_st s;
+        train_st t;
     };
-};
+} transport_st;
 
-struct transport *In(const FILE *ifstream);
+transport_st *TransportIn(const FILE *ifstream);
 
-void *Out(const FILE *ofstream, const struct transport *trans);
+void *Out(const transport_st *tr, const FILE *ofstream);
 
-double TimeToDest(const struct transport *trans);
+double TimeToDest(const transport_st *tr);
 
 #endif
