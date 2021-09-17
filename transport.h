@@ -20,7 +20,7 @@ typedef struct transport {
 
 transport_st *TransportIn(const FILE *ifstream);
 
-void *Out(const transport_st *tr, const FILE *ofstream);
+void TransportOut(const transport_st *tr, const FILE *ofstream);
 
 double TimeToDest(const transport_st *tr);
 

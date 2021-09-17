@@ -4,7 +4,7 @@
 
 #define MAX_LINE_LENGTH 80
 
-transport_st *In(FILE *ifstream) {
+transport_st *TransportIn(const FILE *ifstream) {
     transport_st *tr;
 
     char *end;
@@ -35,7 +35,7 @@ transport_st *In(FILE *ifstream) {
     return tr;
 }
 
-void *Out(const transport_st *tr, const FILE *ofstream) {
+void TransportOut(const transport_st *tr, const FILE *ofstream) {
     switch (tr->transport_type) {
         case PLANE:
             PlaneOut(&tr->p, TimeToDest(tr), ofstream);
