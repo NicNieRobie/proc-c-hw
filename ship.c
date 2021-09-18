@@ -1,19 +1,18 @@
 #include "transport.h"
-#include "rnd.h"
 
 #include <stdlib.h>
 #include <string.h>
-#include <assert.h>
 
 #define MAX_LINE_LENGTH 80
 
-ship_st *ShipIn(FILE *ifstream) {
-    ship_st *ship = malloc(sizeof(ship_st));
-
+int ShipIn(ship_st *ship, FILE *ifstream) {
     char *end;
     char *num_strs[4];
     char line[MAX_LINE_LENGTH];
-    fgets(line, MAX_LINE_LENGTH, ifstream);
+
+    if (fgets(line, MAX_LINE_LENGTH, ifstream) == NULL) {
+        return -1;
+    }
 
     char *word_ptr;
     short cntr = 0;
@@ -24,11 +23,19 @@ ship_st *ShipIn(FILE *ifstream) {
         cntr++;
     }
 
-    assert(cntr == 4);
+    if (cntr != 4) {
+        fprintf(stderr, "INCORRECT ARGUMENT NUMBER");
+        exit(EXIT_FAILURE);
+    }
 
     int values[4];
     for (int i = 0; i < cntr; i++) {
-        values[i] = strtol(&word_ptr[i], &end, 10);
+        values[i] = strtol(num_strs[i], &end, 10);
+    }
+
+    if (values[2] < 1 || values[2] > 3) {
+        fprintf(stderr, "INCORRECT SHIP TYPE");
+        exit(EXIT_FAILURE);
     }
 
     ship->base->speed = values[0];
@@ -36,19 +43,17 @@ ship_st *ShipIn(FILE *ifstream) {
     ship->st = values[2];
     ship->displacement = values[3];
 
-    return ship;
+    return 0;
 }
 
 ship_st *ShipInRand() {
     ship_st *ship = malloc(sizeof(ship_st));
-    ship->st = Rand(1, 3);
-    ship->displacement = Rand(1000, 65000);
+    ship->st = RandInt(1, 3);
+    ship->displacement = RandInt(1000, 65000);
     return ship;
 }
 
 void ShipOut(const ship_st *ship, FILE *ofstream) {
-    char output_buf[256];
-
     char* shipType = NULL;
 
     switch (ship->st) {
@@ -63,11 +68,9 @@ void ShipOut(const ship_st *ship, FILE *ofstream) {
             break;
     }
 
-    snprintf(output_buf, sizeof output_buf,
+    fprintf(ofstream,
              "This is a ship. Speed: %d, distance to destination: %f, "
-             "ship type: %s, time to destination: %f\n",
+             "ship type: %s, displacement:%d, time to destination: %f\n",
              ship->base->speed, ship->base->dest_distance,
-             shipType, TimeToDest(ship->base));
-
-    fputs(output_buf, ofstream);
+             shipType, ship->displacement, TimeToDest(ship->base));
 }

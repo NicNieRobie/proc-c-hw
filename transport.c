@@ -1,5 +1,4 @@
 #include "transport.h"
-#include "rnd.h"
 
 #include <stdlib.h>
 
@@ -17,23 +16,26 @@ transport_st *TransportIn(FILE *ifstream) {
         case 1:
             tr = malloc(sizeof(transport_st));
             tr->transport_type = PLANE;
-            tr->p = *PlaneIn(ifstream);
             tr->p.base = tr;
+            int resP = PlaneIn(&tr->p, ifstream);
+            if (resP == -1) return NULL;
             break;
         case 2:
             tr = malloc(sizeof(transport_st));
             tr->transport_type = SHIP;
-            tr->s = *ShipIn(ifstream);
             tr->s.base = tr;
+            int resS = ShipIn(&tr->s, ifstream);
+            if (resS == -1) return NULL;
             break;
         case 3:
             tr = malloc(sizeof(transport_st));
             tr->transport_type = TRAIN;
-            tr->t = *TrainIn(ifstream);
             tr->t.base = tr;
+            int resT = TrainIn(&tr->t, ifstream);
+            if (resT == -1) return NULL;
             break;
         default:
-            return(0);
+            return NULL;
     }
 
     return tr;
@@ -41,9 +43,9 @@ transport_st *TransportIn(FILE *ifstream) {
 
 transport_st *TransportInRand() {
     transport_st *tr = malloc(sizeof(transport_st));
-    tr->speed = Rand(1, 200);
-    tr->dest_distance = Rand(5, 2000);
-    tr->transport_type = Rand(1, 3);
+    tr->speed = RandInt(1, 200);
+    tr->dest_distance = RandInt(5, 2000);
+    tr->transport_type = RandInt(0, 2);
 
     switch (tr->transport_type) {
         case PLANE:

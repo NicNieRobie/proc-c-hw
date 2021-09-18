@@ -10,7 +10,7 @@ typedef struct {
     int car_amount;
 } train_st;
 
-train_st *TrainIn(FILE *ifstream);
+int TrainIn(train_st *train, FILE *ifstream);
 train_st *TrainInRand();
 void TrainOut(const train_st *train, FILE *ofstream);
 

@@ -17,12 +17,13 @@ set(SOURCE_FILES
     plane.h
     ship.h
     train.h
+        rnd.h
 
     # Sources
     transport.c
     plane.c
     train.c
     ship.c
-        rnd.h)
+        container.c main.c rnd.c)
 
 add_executable(proc-c-1 ${SOURCE_FILES})

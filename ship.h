@@ -7,11 +7,11 @@ typedef struct transport transport_st;
 
 typedef struct {
     transport_st *base;
-    enum shipType {LINER = 0, TUGBOAT, TANKER} st;
+    enum shipType {LINER = 1, TUGBOAT, TANKER} st;
     int displacement;
 } ship_st;
 
-ship_st *ShipIn(FILE *ifstream);
+int ShipIn(ship_st *ship, FILE *ifstream);
 ship_st *ShipInRand();
 void ShipOut(const ship_st *ship, FILE *ofstream);
 

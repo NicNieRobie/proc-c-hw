@@ -1,19 +1,18 @@
 #include "transport.h"
-#include "rnd.h"
 
 #include <stdlib.h>
 #include <string.h>
-#include <assert.h>
 
 #define MAX_LINE_LENGTH 80
 
-plane_st *PlaneIn(FILE *ifstream) {
-    plane_st *plane = malloc(sizeof(plane_st));
-
+int PlaneIn(plane_st* plane, FILE *ifstream) {
     char *end;
     char *num_strs[4];
     char line[MAX_LINE_LENGTH];
-    fgets(line, MAX_LINE_LENGTH, ifstream);
+
+    if (fgets(line, MAX_LINE_LENGTH, ifstream) == NULL) {
+        return -1;
+    }
 
     char *word_ptr;
     short cntr = 0;
@@ -24,11 +23,14 @@ plane_st *PlaneIn(FILE *ifstream) {
         cntr++;
     }
 
-    assert(cntr == 4);
+    if (cntr != 4)  {
+        fprintf(stderr, "INCORRECT ARGUMENT NUMBER");
+        exit(EXIT_FAILURE);
+    }
 
     int values[4];
     for (int i = 0; i < cntr; i++) {
-        values[i] = strtol(&word_ptr[i], &end, 10);
+        values[i] = strtol(num_strs[i], &end, 10);
     }
 
     plane->base->speed = values[0];
@@ -36,24 +38,20 @@ plane_st *PlaneIn(FILE *ifstream) {
     plane->max_distance = values[2];
     plane->capacity = values[3];
 
-    return plane;
+    return 0;
 }
 
 plane_st *PlaneInRand() {
     plane_st *plane = malloc(sizeof(plane_st));
-    plane->capacity = Rand(100, 300);
-    plane->max_distance = Rand(2000, 4000);
+    plane->capacity = RandInt(100, 300);
+    plane->max_distance = RandInt(2000, 4000);
     return plane;
 }
 
 void PlaneOut(const plane_st *plane, FILE *ofstream) {
-    char output_buf[256];
-
-    snprintf(output_buf, sizeof output_buf,
-             "This is a plane. Speed: %d, distance to destination: %f, "
+    fprintf(ofstream,
+            "This is a plane. Speed: %d, distance to destination: %f, "
              "maximum flight distance: %d, capacity: %d, time to destination: %f\n",
              plane->base->speed, plane->base->dest_distance,
              plane->max_distance, plane->capacity, TimeToDest(plane->base));
-
-    fputs(output_buf, ofstream);
 }

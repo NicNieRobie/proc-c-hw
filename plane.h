@@ -10,7 +10,7 @@ typedef struct {
     int max_distance, capacity;
 } plane_st;
 
-plane_st *PlaneIn(FILE *ifstream);
+int PlaneIn(plane_st *plane, FILE *ifstream);
 plane_st *PlaneInRand();
 void PlaneOut(const plane_st *plane, FILE *ofstream);
 
