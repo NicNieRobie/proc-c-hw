@@ -20,6 +20,9 @@ set(SOURCE_FILES
 
     # Sources
     transport.c
-)
+    plane.c
+    train.c
+    ship.c
+        rnd.h)
 
 add_executable(proc-c-1 ${SOURCE_FILES})

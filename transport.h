@@ -1,7 +1,5 @@
-#ifndef PROCC_TRANSPORT_H_
-#define PROCC_TRANSPORT_H_
-
-#include "stdio.h"
+#ifndef PROC_C_1_TRANSPORT_H_
+#define PROC_C_1_TRANSPORT_H_
 
 #include "plane.h"
 #include "ship.h"
@@ -18,10 +16,10 @@ typedef struct transport {
     };
 } transport_st;
 
-transport_st *TransportIn(const FILE *ifstream);
-
-void TransportOut(const transport_st *tr, const FILE *ofstream);
+transport_st *TransportIn(FILE *ifstream);
+transport_st *TransportInRand();
+void TransportOut(const transport_st *tr, FILE *ofstream);
 
 double TimeToDest(const transport_st *tr);
 
-#endif
+#endif //PROC_C_1_TRANSPORT_H_
