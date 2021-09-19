@@ -6,11 +6,10 @@
 typedef struct transport transport_st;
 
 typedef struct {
-    transport_st *base;
     int max_distance, capacity;
 } plane_st;
 
-int PlaneIn(plane_st *plane, FILE *ifstream);
+void PlaneIn(plane_st *plane, FILE *ifstream);
 plane_st *PlaneInRand();
 void PlaneOut(const plane_st *plane, FILE *ofstream);
 

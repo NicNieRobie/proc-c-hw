@@ -1,45 +1,32 @@
 #include "test_generation.h"
 
 void GenerateTest(FILE *ofstream) {
-    int entity_count = RandInt(5, 10000);
+    int entity_count = RandInt(5, 20);
 
     for (int i = 0; i < entity_count; i++) {
         int transport_type = RandInt(1, 3);
-        fprintf(ofstream, "%d\n", transport_type);
-        int* args;
-        int arg_count;
+        int speed = RandInt(100, 700);
+        int dist_to_dest = RandInt(500, 3000);
+        fprintf(ofstream, "%d %d %d\n", transport_type, speed, dist_to_dest);
+
         switch (transport_type) {
             case 1: {
-                arg_count = PLANE_ARGS;
-                args = calloc(arg_count, sizeof(int));
-                args[0] = RandInt(100, 700); // speed
-                args[1] = RandInt(500, 3000); // distance to destination
-                args[2] = RandInt(500, 7000); // maximum reach
-                args[3] = RandInt(3, 300); // capacity
+                int max_reach = RandInt(500, 7000);
+                int cap = RandInt(3, 300);
+                fprintf(ofstream, "%d %d\n", max_reach, cap);
                 break;
             }
             case 2: {
-                arg_count = SHIP_ARGS;
-                args = calloc(arg_count, sizeof(int));
-                args[0] = RandInt(100, 700); // speed
-                args[1] = RandInt(500, 3000); // distance to destination
-                args[2] = RandInt(1, 3); // ship type
-                args[3] = RandInt(1000, 15000); // displacement
+                int ship_type = RandInt(1, 3);
+                int disp = RandInt(1000, 15000);
+                fprintf(ofstream, "%d %d\n", ship_type, disp);
                 break;
             }
             case 3: {
-                arg_count = TRAIN_ARGS;
-                args = calloc(arg_count, sizeof(int));
-                args[0] = RandInt(100, 700); // speed
-                args[1] = RandInt(500, 3000); // distance to destination
-                args[2] = RandInt(5, 15); // car amount
+                int car_amount = RandInt(5, 15);
+                fprintf(ofstream, "%d\n", car_amount);
                 break;
             }
-        }
-
-        for (int i = 0; i < arg_count; i++) {
-            char suffix = (i == arg_count - 1) ? '\n' : ' ';
-            fprintf(ofstream, "%d%c", args[i], suffix);
         }
     }
 }

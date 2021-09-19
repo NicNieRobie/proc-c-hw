@@ -4,11 +4,11 @@
 #include "plane.h"
 #include "ship.h"
 #include "train.h"
-
 #include "rnd.h"
+#include "file_read.h"
 
 typedef struct transport {
-    enum transport_type_et {PLANE = 0, SHIP, TRAIN} transport_type;
+    enum transport_type_et {PLANE = 1, SHIP, TRAIN} transport_type;
     int speed;
     double dest_distance;
     union {

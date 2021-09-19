@@ -1,49 +1,42 @@
 #include "transport.h"
 
 #include <stdlib.h>
+#include <string.h>
 
 #define MAX_LINE_LENGTH 80
 
 transport_st *TransportIn(FILE *ifstream) {
     transport_st *tr;
 
-    char *end;
-    char line[MAX_LINE_LENGTH];
-    fgets(line, MAX_LINE_LENGTH, ifstream);
-    long key = strtol(line, &end, 10);
+    int *values = ReadArgsFromLine(3, ifstream);
 
-    switch (key) {
-        case 1:
-            tr = malloc(sizeof(transport_st));
-            tr->transport_type = PLANE;
-            tr->p.base = tr;
-            int resP = PlaneIn(&tr->p, ifstream);
-            if (resP == -1) {
-                fprintf(stderr, "COULD NOT READ TRANSPORT DATA");
-                exit(EXIT_FAILURE);
-            }
+    if(values == NULL) return NULL;
+
+    if (values[0] < 1 || values[0] > 3) {
+        fprintf(stderr, "INCORRECT TRANSPORT TYPE");
+        exit(EXIT_FAILURE);
+    }
+
+    tr = malloc(sizeof(transport_st));
+    tr->transport_type = values[0];
+    tr->speed = values[1];
+    tr->dest_distance = values[2];
+
+    switch (tr->transport_type) {
+        case PLANE:{
+            PlaneIn(&tr->p, ifstream);
             break;
-        case 2:
-            tr = malloc(sizeof(transport_st));
-            tr->transport_type = SHIP;
-            tr->s.base = tr;
-            int resS = ShipIn(&tr->s, ifstream);
-            if (resS == -1) {
-                fprintf(stderr, "COULD NOT READ TRANSPORT DATA");
-                exit(EXIT_FAILURE);
-            }
+        }
+        case SHIP: {
+            ShipIn(&tr->s, ifstream);
             break;
-        case 3:
-            tr = malloc(sizeof(transport_st));
-            tr->transport_type = TRAIN;
-            tr->t.base = tr;
-            int resT = TrainIn(&tr->t, ifstream);
-            if (resT == -1) {
-                fprintf(stderr, "COULD NOT READ TRANSPORT DATA");
-                exit(EXIT_FAILURE);
-            }
+        }
+        case TRAIN: {
+            TrainIn(&tr->t, ifstream);
             break;
+        }
         default:
+            free(tr);
             fprintf(stderr, "INVALID TRANSPORT TYPE");
             exit(EXIT_FAILURE);
     }
@@ -60,15 +53,12 @@ transport_st *TransportInRand() {
     switch (tr->transport_type) {
         case PLANE:
             tr->p = *PlaneInRand();
-            tr->p.base = tr;
             break;
         case SHIP:
             tr->s = *ShipInRand();
-            tr->s.base = tr;
             break;
         case TRAIN:
             tr->t = *TrainInRand();
-            tr->t.base = tr;
             break;
     }
 
@@ -78,12 +68,24 @@ transport_st *TransportInRand() {
 void TransportOut(const transport_st *tr, FILE *ofstream) {
     switch (tr->transport_type) {
         case PLANE:
+            fprintf(ofstream, "This is a plane. Speed: %d, "
+                              "distance to destination: %f, "
+                              "time to distance: %f, ",
+                              tr->speed, tr->dest_distance, TimeToDest(tr));
             PlaneOut(&tr->p, ofstream);
             break;
         case SHIP:
+            fprintf(ofstream, "This is a ship. Speed: %d, "
+                              "distance to destination: %f, "
+                              "time to distance: %f, ",
+                              tr->speed, tr->dest_distance, TimeToDest(tr));
             ShipOut(&tr->s, ofstream);
             break;
         case TRAIN:
+            fprintf(ofstream, "This is a train. Speed: %d, "
+                              "distance to destination: %f, "
+                              "time to distance: %f, ",
+                              tr->speed, tr->dest_distance, TimeToDest(tr));
             TrainOut(&tr->t, ofstream);
             break;
     }

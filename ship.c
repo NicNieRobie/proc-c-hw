@@ -1,49 +1,20 @@
 #include "transport.h"
 
-#include <stdlib.h>
-#include <string.h>
+void ShipIn(ship_st *ship, FILE *ifstream) {
+    int *values = ReadArgsFromLine(2, ifstream);
 
-#define MAX_LINE_LENGTH 80
-
-int ShipIn(ship_st *ship, FILE *ifstream) {
-    char *end;
-    char *num_strs[4];
-    char line[MAX_LINE_LENGTH];
-
-    if (fgets(line, MAX_LINE_LENGTH, ifstream) == NULL) {
-        return -1;
-    }
-
-    char *word_ptr;
-    short cntr = 0;
-    word_ptr = strtok(line, " ");
-    while (word_ptr != NULL) {
-        num_strs[cntr] = word_ptr;
-        word_ptr = strtok(NULL, " ");
-        cntr++;
-    }
-
-    if (cntr != 4) {
-        fprintf(stderr, "INCORRECT ARGUMENT NUMBER");
+    if (values == NULL) {
+        fprintf(stderr, "COULD NOT READ TRANSPORT DATA");
         exit(EXIT_FAILURE);
     }
 
-    int values[4];
-    for (int i = 0; i < cntr; i++) {
-        values[i] = strtol(num_strs[i], &end, 10);
-    }
-
-    if (values[2] < 1 || values[2] > 3) {
+    if (values[0] < 1 || values[0] > 3) {
         fprintf(stderr, "INCORRECT SHIP TYPE");
         exit(EXIT_FAILURE);
     }
 
-    ship->base->speed = values[0];
-    ship->base->dest_distance = values[1];
-    ship->st = values[2];
-    ship->displacement = values[3];
-
-    return 0;
+    ship->st = values[0];
+    ship->displacement = values[1];
 }
 
 ship_st *ShipInRand() {
@@ -68,9 +39,5 @@ void ShipOut(const ship_st *ship, FILE *ofstream) {
             break;
     }
 
-    fprintf(ofstream,
-             "This is a ship. Speed: %d, distance to destination: %f, "
-             "ship type: %s, displacement: %d, time to destination: %f\n",
-             ship->base->speed, ship->base->dest_distance,
-             shipType, ship->displacement, TimeToDest(ship->base));
+    fprintf(ofstream, "ship type: %s, displacement: %d\n", shipType, ship->displacement);
 }

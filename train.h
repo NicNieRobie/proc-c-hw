@@ -6,11 +6,10 @@
 typedef struct transport transport_st;
 
 typedef struct {
-    transport_st *base;
     int car_amount;
 } train_st;
 
-int TrainIn(train_st *train, FILE *ifstream);
+void TrainIn(train_st *train, FILE *ifstream);
 train_st *TrainInRand();
 void TrainOut(const train_st *train, FILE *ofstream);
 

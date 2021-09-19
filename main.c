@@ -110,6 +110,6 @@ int main(int argc, char* argv[]) {
         Clear(&c);
     }
 
-    printf("Stop");
+    fprintf(stdin, "Stop");
     return 0;
 }
