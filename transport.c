@@ -18,24 +18,34 @@ transport_st *TransportIn(FILE *ifstream) {
             tr->transport_type = PLANE;
             tr->p.base = tr;
             int resP = PlaneIn(&tr->p, ifstream);
-            if (resP == -1) return NULL;
+            if (resP == -1) {
+                fprintf(stderr, "COULD NOT READ TRANSPORT DATA");
+                exit(EXIT_FAILURE);
+            }
             break;
         case 2:
             tr = malloc(sizeof(transport_st));
             tr->transport_type = SHIP;
             tr->s.base = tr;
             int resS = ShipIn(&tr->s, ifstream);
-            if (resS == -1) return NULL;
+            if (resS == -1) {
+                fprintf(stderr, "COULD NOT READ TRANSPORT DATA");
+                exit(EXIT_FAILURE);
+            }
             break;
         case 3:
             tr = malloc(sizeof(transport_st));
             tr->transport_type = TRAIN;
             tr->t.base = tr;
             int resT = TrainIn(&tr->t, ifstream);
-            if (resT == -1) return NULL;
+            if (resT == -1) {
+                fprintf(stderr, "COULD NOT READ TRANSPORT DATA");
+                exit(EXIT_FAILURE);
+            }
             break;
         default:
-            return NULL;
+            fprintf(stderr, "INVALID TRANSPORT TYPE");
+            exit(EXIT_FAILURE);
     }
 
     return tr;

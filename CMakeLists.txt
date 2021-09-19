@@ -24,6 +24,6 @@ set(SOURCE_FILES
     plane.c
     train.c
     ship.c
-        container.c main.c rnd.c)
+        container.c main.c rnd.c test_generation.c test_generation.h)
 
 add_executable(proc-c-1 ${SOURCE_FILES})

@@ -70,7 +70,7 @@ void ShipOut(const ship_st *ship, FILE *ofstream) {
 
     fprintf(ofstream,
              "This is a ship. Speed: %d, distance to destination: %f, "
-             "ship type: %s, displacement:%d, time to destination: %f\n",
+             "ship type: %s, displacement: %d, time to destination: %f\n",
              ship->base->speed, ship->base->dest_distance,
              shipType, ship->displacement, TimeToDest(ship->base));
 }
