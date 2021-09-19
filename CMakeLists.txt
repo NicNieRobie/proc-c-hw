@@ -17,13 +17,20 @@ set(SOURCE_FILES
     plane.h
     ship.h
     train.h
-        rnd.h
+    rnd.h
+    test_generation.h
+    file_read.h
 
     # Sources
     transport.c
     plane.c
     train.c
     ship.c
-        container.c main.c rnd.c test_generation.c test_generation.h file_read.h file_read.c)
+    container.c 
+    main.c 
+    rnd.c 
+    test_generation.c
+    file_read.c
+)
 
 add_executable(proc-c-1 ${SOURCE_FILES})
