@@ -58,7 +58,8 @@ void InputModeError() {
 //-------------------------------------------------------------------------
 /// Program entry point.
 int main(int argc, char* argv[]) {
-    fprintf(stdin, "Start\n");
+    clock_t start = clock();
+    fprintf(stdout, "Start\n");
 
     // Generating the tests.
     if(argc == 4) {
@@ -132,6 +133,10 @@ int main(int argc, char* argv[]) {
         Clear(&c);
     }
 
-    fprintf(stdin, "Stop");
+    // Measuring the runtime.
+    clock_t end = clock();
+    float seconds = (float)(end - start) / CLOCKS_PER_SEC;
+
+    fprintf(stdout, "Stop at %.6g secs", seconds);
     return 0;
 }

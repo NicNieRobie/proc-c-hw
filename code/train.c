@@ -16,7 +16,7 @@ void TrainIn(train_st* train, FILE *ifstream) {
         exit(EXIT_FAILURE);
     }
 
-    train->car_amount = values[1];
+    train->car_amount = values[0];
 }
 
 //-------------------------------------------------------------------------

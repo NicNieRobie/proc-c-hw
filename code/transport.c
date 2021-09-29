@@ -80,13 +80,14 @@ transport_st *TransportInRand() {
 /// @param tr Object being described.
 /// @param ofstream Input file stream.
 void TransportOut(const transport_st *tr, FILE *ofstream) {
+    double timeToDest = TimeToDest(tr);
     switch (tr->transport_type) {
         case PLANE:
             fprintf(ofstream, "This is a plane. Speed: %d, "
                               "distance to destination: %f, "
                               "time to distance: %f, ",
                               tr->speed, tr->dest_distance,
-                              TimeToDest(tr));
+                              timeToDest);
             PlaneOut(&tr->p, ofstream);
             break;
         case SHIP:
@@ -94,7 +95,7 @@ void TransportOut(const transport_st *tr, FILE *ofstream) {
                               "distance to destination: %f, "
                               "time to distance: %f, ",
                               tr->speed, tr->dest_distance,
-                              (tr));
+                              timeToDest);
             ShipOut(&tr->s, ofstream);
             break;
         case TRAIN:
@@ -102,7 +103,7 @@ void TransportOut(const transport_st *tr, FILE *ofstream) {
                               "distance to destination: %f, "
                               "time to distance: %f, ",
                               tr->speed, tr->dest_distance,
-                              TimeToDest(tr));
+                              timeToDest);
             TrainOut(&tr->t, ofstream);
             break;
     }
