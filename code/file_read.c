@@ -1,5 +1,14 @@
+/*------------------------------ file_read.c ------------------------------
+ * Contains a definition of a function for reading and parsing lines from
+ *   file stream.
+ *-------------------------------------------------------------------------*/
+
 #include "file_read.h"
 
+//-------------------------------------------------------------------------
+/// Reads the given amount of argument values from line in the file.
+/// @param arg_count Amount of arguments to be read.
+/// @param ifstream_line Input file stream (pointer to the current line).
 int *ReadArgsFromLine(int arg_count, FILE *ifstream_line) {
     char *end;
     char **num_strs = calloc(arg_count, sizeof(char*));

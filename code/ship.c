@@ -1,5 +1,13 @@
+/*-------------------------------- ship.c ---------------------------------
+ * Plane data type functionality definition.
+ *-------------------------------------------------------------------------*/
+
 #include "transport.h"
 
+//-------------------------------------------------------------------------
+/// Initializes the ship_st object with arguments from input file stream.
+/// @param ship Pointer to the object being initialized.
+/// @param ifstream Input file stream.
 void ShipIn(ship_st *ship, FILE *ifstream) {
     int *values = ReadArgsFromLine(2, ifstream);
 
@@ -17,6 +25,8 @@ void ShipIn(ship_st *ship, FILE *ifstream) {
     ship->displacement = values[1];
 }
 
+//-------------------------------------------------------------------------
+/// Returns the pointer to ship_st object initialized with random values.
 ship_st *ShipInRand() {
     ship_st *ship = malloc(sizeof(ship_st));
     ship->st = RandInt(1, 3);
@@ -24,6 +34,10 @@ ship_st *ShipInRand() {
     return ship;
 }
 
+//-------------------------------------------------------------------------
+/// Prints a description of the ship_st object to output file stream.
+/// @param ship Pointer to the object being described.
+/// @param ofstream Output file stream.
 void ShipOut(const ship_st *ship, FILE *ofstream) {
     char* shipType = NULL;
 
@@ -39,5 +53,6 @@ void ShipOut(const ship_st *ship, FILE *ofstream) {
             break;
     }
 
-    fprintf(ofstream, "ship type: %s, displacement: %d\n", shipType, ship->displacement);
+    fprintf(ofstream, "ship type: %s, displacement: %d\n",
+            shipType, ship->displacement);
 }

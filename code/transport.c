@@ -1,10 +1,16 @@
-#include "transport.h"
+/*------------------------------ transport.c ------------------------------
+ * Generalized transport data type functionality declaration.
+ *-------------------------------------------------------------------------*/
 
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_LINE_LENGTH 80
+#include "transport.h"
 
+//-------------------------------------------------------------------------
+/// Returns a pointer to the transport_st object initialized with values
+///   read from input file stream.
+/// @param ifstream Input file stream.
 transport_st *TransportIn(FILE *ifstream) {
     transport_st *tr;
 
@@ -44,6 +50,9 @@ transport_st *TransportIn(FILE *ifstream) {
     return tr;
 }
 
+//-------------------------------------------------------------------------
+/// Returns a pointer to the transport_st object initialized with randomly
+///   generated values.
 transport_st *TransportInRand() {
     transport_st *tr = malloc(sizeof(transport_st));
     tr->speed = RandInt(1, 200);
@@ -65,32 +74,43 @@ transport_st *TransportInRand() {
     return tr;
 }
 
+//-------------------------------------------------------------------------
+/// Prints a description of the given transport_st object to the output
+///   file stream.
+/// @param tr Object being described.
+/// @param ofstream Input file stream.
 void TransportOut(const transport_st *tr, FILE *ofstream) {
     switch (tr->transport_type) {
         case PLANE:
             fprintf(ofstream, "This is a plane. Speed: %d, "
                               "distance to destination: %f, "
                               "time to distance: %f, ",
-                              tr->speed, tr->dest_distance, TimeToDest(tr));
+                              tr->speed, tr->dest_distance,
+                              TimeToDest(tr));
             PlaneOut(&tr->p, ofstream);
             break;
         case SHIP:
             fprintf(ofstream, "This is a ship. Speed: %d, "
                               "distance to destination: %f, "
                               "time to distance: %f, ",
-                              tr->speed, tr->dest_distance, TimeToDest(tr));
+                              tr->speed, tr->dest_distance,
+                              (tr));
             ShipOut(&tr->s, ofstream);
             break;
         case TRAIN:
             fprintf(ofstream, "This is a train. Speed: %d, "
                               "distance to destination: %f, "
                               "time to distance: %f, ",
-                              tr->speed, tr->dest_distance, TimeToDest(tr));
+                              tr->speed, tr->dest_distance,
+                              TimeToDest(tr));
             TrainOut(&tr->t, ofstream);
             break;
     }
 }
 
+//-------------------------------------------------------------------------
+/// Returns the time needed for the transport to reach the destination.
+/// @param tr The transport object.
 double TimeToDest(const transport_st *tr) {
     return tr->dest_distance / tr->speed;
 }

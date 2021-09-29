@@ -1,5 +1,12 @@
+/*--------------------------- test_generation.c ---------------------------
+ * Contains a definition of a function for generating a test input case.
+ *-------------------------------------------------------------------------*/
+
 #include "test_generation.h"
 
+//-------------------------------------------------------------------------
+/// Generates a test input case in a given file.
+/// @param ofstream Output file stream.
 void GenerateTest(FILE *ofstream) {
     int entity_count = RandInt(5, 20);
 

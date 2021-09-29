@@ -1,3 +1,7 @@
+/*--------------------------------- main.c --------------------------------
+ * Program entry point and error messages.
+ *-------------------------------------------------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -6,6 +10,10 @@
 #include "container.h"
 #include "test_generation.h"
 
+//-------------------------------------------------------------------------
+/// Generates a given amount of test input files in a specified directory.
+/// @param file_count Amount of files to be generated.
+/// @param dir_path Path to directory.
 void GenerateTestFiles(int file_count, char* dir_path) {
     if (file_count > 124) {
         fprintf(stderr, "Number of files is too big. "
@@ -13,6 +21,7 @@ void GenerateTestFiles(int file_count, char* dir_path) {
         exit(EXIT_FAILURE);
     }
 
+    // Generating the files.
     for (int i = 1; i <= file_count; i++) {
         char filename_buffer[128];
         snprintf(filename_buffer, 128, "%s/test%d.txt", dir_path, i);
@@ -22,8 +31,10 @@ void GenerateTestFiles(int file_count, char* dir_path) {
     }
 }
 
+//-------------------------------------------------------------------------
+/// Prints the argument number error.
 void ArgNumError() {
-    fprintf(stderr, "Incorrect command line!\n"
+    fprintf(stderr, "Incorrect number of arguments in the command line!\n"
             "  Expected:\n"
             "     processname -f infile outfile01 outfile02\n"
             "  Or:\n"
@@ -32,6 +43,8 @@ void ArgNumError() {
             "     processname -g number dirpath");
 }
 
+//-------------------------------------------------------------------------
+/// Prints the input mode error.
 void InputModeError() {
     fprintf(stderr, "Incorrect input mode!\n"
            "  Expected:\n"
@@ -42,9 +55,12 @@ void InputModeError() {
            "     processname -g number dirpath");
 }
 
+//-------------------------------------------------------------------------
+/// Program entry point.
 int main(int argc, char* argv[]) {
     fprintf(stdin, "Start\n");
 
+    // Generating the tests.
     if(argc == 4) {
         if (strcmp(argv[1], "-g") == 0) {
             printf("\n");
@@ -56,7 +72,9 @@ int main(int argc, char* argv[]) {
             InputModeError();
             exit(EXIT_FAILURE);
         }
-    } else {
+    }
+    // Processing input data.
+    else {
         if(argc != 5) {
             ArgNumError();
             exit(EXIT_FAILURE);
@@ -65,6 +83,7 @@ int main(int argc, char* argv[]) {
         container_st c;
         Initialize(&c);
 
+        // Reading from file.
         if(strcmp(argv[1], "-f") == 0) {
             FILE *ifstream = fopen(argv[2], "r");
             if(!ifstream) {
@@ -73,6 +92,7 @@ int main(int argc, char* argv[]) {
             }
             In(&c, ifstream);
         }
+        // Generating the container randomly.
         else if(strcmp(argv[1], "-n") == 0) {
             int size = atoi(argv[2]);
             if((size < 1) || (size > 10000)) {
@@ -88,6 +108,8 @@ int main(int argc, char* argv[]) {
             InputModeError();
             exit(EXIT_FAILURE);
         }
+
+        // Printing the results.
 
         FILE *ofstream1 = fopen(argv[3], "w");
         if(!ofstream1) {
