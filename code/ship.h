@@ -11,7 +11,7 @@ typedef struct transport transport_st;
 
 //---------------------------- type definition ----------------------------
 typedef struct {
-    enum shipType {LINER = 1, TUGBOAT, TANKER} st;
+    enum ship_type {LINER = 1, TUGBOAT, TANKER} st;
     int displacement;
 } ship_st;
 

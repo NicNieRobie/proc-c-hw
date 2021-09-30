@@ -36,9 +36,9 @@ void GenerateTestFiles(int file_count, char* dir_path) {
 void ArgNumError() {
     fprintf(stderr, "Incorrect number of arguments in the command line!\n"
             "  Expected:\n"
-            "     processname -f infile outfile01 outfile02\n"
+            "     processname -f infile outfile\n"
             "  Or:\n"
-            "     processname -n number outfile01 outfile02\n"
+            "     processname -n number outfile\n"
             "  Or:\n"
             "     processname -g number dirpath");
 }
@@ -48,9 +48,9 @@ void ArgNumError() {
 void InputModeError() {
     fprintf(stderr, "Incorrect input mode!\n"
            "  Expected:\n"
-           "     processname -f infile outfile01 outfile02\n"
+           "     processname -f infile outfile\n"
            "  Or:\n"
-           "     processname -n number outfile01 outfile02\n"
+           "     processname -n number outfile\n"
            "  Or:\n"
            "     processname -g number dirpath");
 }
@@ -61,82 +61,69 @@ int main(int argc, char* argv[]) {
     clock_t start = clock();
     fprintf(stdout, "Start\n");
 
-    // Generating the tests.
-    if(argc == 4) {
-        if (strcmp(argv[1], "-g") == 0) {
-            printf("\n");
-            int file_count = atoi(argv[2]);
-            char *dir_path = argv[3];
-            GenerateTestFiles(file_count, dir_path);
-            printf("%d tests generated\n\n", file_count);
-        } else {
-            InputModeError();
-            exit(EXIT_FAILURE);
-        }
-    }
     // Processing input data.
-    else {
-        if(argc != 5) {
-            ArgNumError();
-            exit(EXIT_FAILURE);
-        }
-
-        container_st c;
-        Initialize(&c);
-
-        // Reading from file.
-        if(strcmp(argv[1], "-f") == 0) {
-            FILE *ifstream = fopen(argv[2], "r");
-            if(!ifstream) {
-                perror("could not read file");
-                exit(EXIT_FAILURE);
-            }
-            In(&c, ifstream);
-        }
-        // Generating the container randomly.
-        else if(strcmp(argv[1], "-n") == 0) {
-            int size = atoi(argv[2]);
-            if((size < 1) || (size > 10000)) {
-                fprintf(stderr, "Amount %d exceeds the max container size. "
-                                "Enter a value: 0 < value <= 10000\n", size);
-                exit(EXIT_FAILURE);
-            }
-
-            srand(time(0));
-            InRand(&c, size);
-        }
-        else {
-            InputModeError();
-            exit(EXIT_FAILURE);
-        }
-
-        // Printing the results.
-
-        FILE *ofstream1 = fopen(argv[3], "w");
-        if(!ofstream1) {
-            perror("could not write to file");
-            exit(EXIT_FAILURE);
-        }
-
-        Out(&c, fopen(argv[3], "w"));
-
-        DeleteLessThanAverage(&c);
-
-        FILE *ofstream2 = fopen(argv[4], "w");
-        if(!ofstream2) {
-            perror("could not write to file");
-            exit(EXIT_FAILURE);
-        }
-
-        Out(&c, fopen(argv[4], "w"));
-
-        Clear(&c);
+    if(argc != 4) {
+        ArgNumError();
+        exit(EXIT_FAILURE);
     }
+
+    container_st c;
+    Initialize(&c);
+
+    // Generating tests.
+    if (strcmp(argv[1], "-g") == 0) {
+        printf("\n");
+        int file_count = atoi(argv[2]);
+        char *dir_path = argv[3];
+        GenerateTestFiles(file_count, dir_path);
+        printf("%d tests generated\n\n", file_count);
+    }
+    // Reading from file.
+    else if (strcmp(argv[1], "-f") == 0) {
+        FILE *ifstream = fopen(argv[2], "r");
+        if(!ifstream) {
+            perror("could not read file");
+            exit(EXIT_FAILURE);
+        }
+        In(&c, ifstream);
+    }
+    // Generating the container randomly.
+    else if(strcmp(argv[1], "-n") == 0) {
+        int size = atoi(argv[2]);
+        if((size < 1) || (size > 10000)) {
+            fprintf(stderr, "Amount %d exceeds the max container size or equals 0. "
+                            "Enter a value: 0 < value <= 10000\n", size);
+            exit(EXIT_FAILURE);
+        }
+
+        srand(time(0));
+        InRand(&c, size);
+    }
+    else {
+        InputModeError();
+        exit(EXIT_FAILURE);
+    }
+
+    // Printing the results.
+
+    FILE *ofstream = fopen(argv[3], "w");
+
+    if(!ofstream) {
+        perror("could not write to file");
+        exit(EXIT_FAILURE);
+    }
+
+    Out(&c, ofstream);
+    DeleteLessThanAverage(&c);
+    fprintf(ofstream, "\n\nAfter the function call:\n");
+    Out(&c, ofstream);
+
+    Clear(&c);
 
     // Measuring the runtime.
     clock_t end = clock();
     float seconds = (float)(end - start) / CLOCKS_PER_SEC;
 
-    fprintf(stdout, "Stop at %.6g secs", seconds);
+    fprintf(stdout, "Stop at %.9g secs", seconds);
     return 0;
 }

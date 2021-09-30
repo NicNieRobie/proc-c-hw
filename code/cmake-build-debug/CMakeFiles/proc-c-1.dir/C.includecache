@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Vlad/Desktop/proc-c-hw/code/container.c
+stdlib.h
+-
+container.h
+C:/Users/Vlad/Desktop/proc-c-hw/code/container.h
+string.h
+C:/Users/Vlad/Desktop/proc-c-hw/code/string.h
+
 C:/Users/Vlad/Desktop/proc-c-hw/code/container.h
 transport.h
 C:/Users/Vlad/Desktop/proc-c-hw/code/transport.h
@@ -32,11 +40,19 @@ C:/Users/Vlad/Desktop/proc-c-hw/code/container.h
 test_generation.h
 C:/Users/Vlad/Desktop/proc-c-hw/code/test_generation.h
 
+C:/Users/Vlad/Desktop/proc-c-hw/code/plane.c
+transport.h
+C:/Users/Vlad/Desktop/proc-c-hw/code/transport.h
+
 C:/Users/Vlad/Desktop/proc-c-hw/code/plane.h
 stdio.h
 -
 
 C:/Users/Vlad/Desktop/proc-c-hw/code/rnd.h
+
+C:/Users/Vlad/Desktop/proc-c-hw/code/ship.c
+transport.h
+C:/Users/Vlad/Desktop/proc-c-hw/code/transport.h
 
 C:/Users/Vlad/Desktop/proc-c-hw/code/ship.h
 stdio.h
@@ -50,9 +66,21 @@ stdlib.h
 rnd.h
 C:/Users/Vlad/Desktop/proc-c-hw/code/rnd.h
 
+C:/Users/Vlad/Desktop/proc-c-hw/code/train.c
+transport.h
+C:/Users/Vlad/Desktop/proc-c-hw/code/transport.h
+
 C:/Users/Vlad/Desktop/proc-c-hw/code/train.h
 stdio.h
 -
+
+C:/Users/Vlad/Desktop/proc-c-hw/code/transport.c
+stdlib.h
+-
+string.h
+-
+transport.h
+C:/Users/Vlad/Desktop/proc-c-hw/code/transport.h
 
 C:/Users/Vlad/Desktop/proc-c-hw/code/transport.h
 plane.h

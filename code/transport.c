@@ -57,7 +57,7 @@ transport_st *TransportInRand() {
     transport_st *tr = malloc(sizeof(transport_st));
     tr->speed = RandInt(1, 200);
     tr->dest_distance = RandInt(5, 2000);
-    tr->transport_type = RandInt(0, 2);
+    tr->transport_type = RandInt(1, 3);
 
     switch (tr->transport_type) {
         case PLANE:
