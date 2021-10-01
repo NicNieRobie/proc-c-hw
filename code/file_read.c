@@ -4,6 +4,7 @@
  *-------------------------------------------------------------------------*/
 
 #include "file_read.h"
+#include "timer.h"
 
 //-------------------------------------------------------------------------
 /// Reads the given amount of argument values from line in the file.
@@ -29,6 +30,7 @@ int *ReadArgsFromLine(int arg_count, FILE *ifstream_line) {
 
     if (cntr != arg_count) {
         fprintf(stderr, "WRONG NUMBER OF ARGUMENTS IN THE DATA");
+        PrintRuntimeDuration();
         exit(EXIT_FAILURE);
     }
 

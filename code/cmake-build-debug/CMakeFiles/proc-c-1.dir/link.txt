@@ -1,3 +1,1 @@
-"E:\Program Files (x86)\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\proc-c-1.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\proc-c-1.dir/objects.a @CMakeFiles\proc-c-1.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\proc-c-1.dir/objects.a -Wl,--no-whole-archive -o ..\bin\proc-c-1.exe -Wl,--out-implib,libproc-c-1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\proc-c-1.dir\linklibs.rsp
+/usr/bin/cc -g CMakeFiles/proc-c-1.dir/transport.c.o CMakeFiles/proc-c-1.dir/plane.c.o CMakeFiles/proc-c-1.dir/train.c.o CMakeFiles/proc-c-1.dir/ship.c.o CMakeFiles/proc-c-1.dir/container.c.o CMakeFiles/proc-c-1.dir/main.c.o CMakeFiles/proc-c-1.dir/rnd.c.o CMakeFiles/proc-c-1.dir/test_generation.c.o CMakeFiles/proc-c-1.dir/file_read.c.o CMakeFiles/proc-c-1.dir/timer.c.o -o ../bin/proc-c-1 

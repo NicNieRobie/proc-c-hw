@@ -6,6 +6,7 @@
 #include <string.h>
 
 #include "transport.h"
+#include "timer.h"
 
 //-------------------------------------------------------------------------
 /// Returns a pointer to the transport_st object initialized with values
@@ -20,6 +21,7 @@ transport_st *TransportIn(FILE *ifstream) {
 
     if (values[0] < 1 || values[0] > 3) {
         fprintf(stderr, "INCORRECT TRANSPORT TYPE");
+        PrintRuntimeDuration();
         exit(EXIT_FAILURE);
     }
 
@@ -44,6 +46,7 @@ transport_st *TransportIn(FILE *ifstream) {
         default:
             free(tr);
             fprintf(stderr, "INVALID TRANSPORT TYPE");
+            PrintRuntimeDuration();
             exit(EXIT_FAILURE);
     }
 

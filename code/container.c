@@ -6,6 +6,7 @@
 
 #include "container.h"
 #include "string.h"
+#include "timer.h"
 
 //-------------------------------------------------------------------------
 /// Initializes the container.
@@ -87,6 +88,11 @@ void InRand(container_st *cont, unsigned int count) {
 void Out(container_st *cont, FILE *ofstream) {
     if(!ofstream) {
         perror("could not write to file");
+        // Measuring the runtime.
+        end_time = clock();
+        float seconds = (float)(end_time - start_time) / CLOCKS_PER_SEC;
+
+        fprintf(stdout, "Stop at %.9g secs", seconds);
         exit(EXIT_FAILURE);
     }
 

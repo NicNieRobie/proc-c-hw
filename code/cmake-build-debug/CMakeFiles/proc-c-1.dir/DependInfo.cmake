@@ -8,15 +8,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Vlad/Desktop/proc-c-hw/code/container.c" "C:/Users/Vlad/Desktop/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/container.c.obj"
-  "C:/Users/Vlad/Desktop/proc-c-hw/code/file_read.c" "C:/Users/Vlad/Desktop/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/file_read.c.obj"
-  "C:/Users/Vlad/Desktop/proc-c-hw/code/main.c" "C:/Users/Vlad/Desktop/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/main.c.obj"
-  "C:/Users/Vlad/Desktop/proc-c-hw/code/plane.c" "C:/Users/Vlad/Desktop/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/plane.c.obj"
-  "C:/Users/Vlad/Desktop/proc-c-hw/code/rnd.c" "C:/Users/Vlad/Desktop/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/rnd.c.obj"
-  "C:/Users/Vlad/Desktop/proc-c-hw/code/ship.c" "C:/Users/Vlad/Desktop/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/ship.c.obj"
-  "C:/Users/Vlad/Desktop/proc-c-hw/code/test_generation.c" "C:/Users/Vlad/Desktop/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/test_generation.c.obj"
-  "C:/Users/Vlad/Desktop/proc-c-hw/code/train.c" "C:/Users/Vlad/Desktop/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/train.c.obj"
-  "C:/Users/Vlad/Desktop/proc-c-hw/code/transport.c" "C:/Users/Vlad/Desktop/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/transport.c.obj"
+  "/home/parallels/Documents/Source files/C/proc-c-hw/code/container.c" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/container.c.o"
+  "/home/parallels/Documents/Source files/C/proc-c-hw/code/file_read.c" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/file_read.c.o"
+  "/home/parallels/Documents/Source files/C/proc-c-hw/code/main.c" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/main.c.o"
+  "/home/parallels/Documents/Source files/C/proc-c-hw/code/plane.c" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/plane.c.o"
+  "/home/parallels/Documents/Source files/C/proc-c-hw/code/rnd.c" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/rnd.c.o"
+  "/home/parallels/Documents/Source files/C/proc-c-hw/code/ship.c" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/ship.c.o"
+  "/home/parallels/Documents/Source files/C/proc-c-hw/code/test_generation.c" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/test_generation.c.o"
+  "/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.c" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/timer.c.o"
+  "/home/parallels/Documents/Source files/C/proc-c-hw/code/train.c" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/train.c.o"
+  "/home/parallels/Documents/Source files/C/proc-c-hw/code/transport.c" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/transport.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

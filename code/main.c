@@ -9,6 +9,7 @@
 
 #include "container.h"
 #include "test_generation.h"
+#include "timer.h"
 
 //-------------------------------------------------------------------------
 /// Generates a given amount of test input files in a specified directory.
@@ -18,6 +19,7 @@ void GenerateTestFiles(int file_count, char* dir_path) {
     if (file_count > 124) {
         fprintf(stderr, "Number of files is too big. "
                         "Specify a number that is less than 124.");
+        PrintRuntimeDuration();
         exit(EXIT_FAILURE);
     }
 
@@ -58,12 +60,13 @@ void InputModeError() {
 //-------------------------------------------------------------------------
 /// Program entry point.
 int main(int argc, char* argv[]) {
-    clock_t start = clock();
+    start_time = clock();
     fprintf(stdout, "Start\n");
 
     // Processing input data.
     if(argc != 4) {
         ArgNumError();
+        PrintRuntimeDuration();
         exit(EXIT_FAILURE);
     }
 
@@ -83,6 +86,7 @@ int main(int argc, char* argv[]) {
         FILE *ifstream = fopen(argv[2], "r");
         if(!ifstream) {
             perror("could not read file");
+            PrintRuntimeDuration();
             exit(EXIT_FAILURE);
         }
         In(&c, ifstream);
@@ -93,6 +97,7 @@ int main(int argc, char* argv[]) {
         if((size < 1) || (size > 10000)) {
             fprintf(stderr, "Amount %d exceeds the max container size or equals 0. "
                             "Enter a value: 0 < value <= 10000\n", size);
+            PrintRuntimeDuration();
             exit(EXIT_FAILURE);
         }
 
@@ -101,6 +106,7 @@ int main(int argc, char* argv[]) {
     }
     else {
         InputModeError();
+        PrintRuntimeDuration();
         exit(EXIT_FAILURE);
     }
 
@@ -110,6 +116,7 @@ int main(int argc, char* argv[]) {
 
     if(!ofstream) {
         perror("could not write to file");
+        PrintRuntimeDuration();
         exit(EXIT_FAILURE);
     }
 
@@ -120,10 +127,6 @@ int main(int argc, char* argv[]) {
 
     Clear(&c);
 
-    // Measuring the runtime.
-    clock_t end = clock();
-    float seconds = (float)(end - start) / CLOCKS_PER_SEC;
-
-    fprintf(stdout, "Stop at %.9g secs", seconds);
+    PrintRuntimeDuration();
     return 0;
 }

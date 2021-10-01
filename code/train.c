@@ -3,6 +3,7 @@
  *-------------------------------------------------------------------------*/
 
 #include "transport.h"
+#include "timer.h"
 
 //-------------------------------------------------------------------------
 /// Initializes the train_st object with arguments from input file stream.
@@ -13,6 +14,7 @@ void TrainIn(train_st* train, FILE *ifstream) {
 
     if (values == NULL) {
         fprintf(stderr, "COULD NOT READ TRANSPORT DATA");
+        PrintRuntimeDuration();
         exit(EXIT_FAILURE);
     }
 

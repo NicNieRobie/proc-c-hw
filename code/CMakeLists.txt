@@ -31,6 +31,6 @@ set(SOURCE_FILES
     rnd.c 
     test_generation.c
     file_read.c
-)
+        timer.h timer.c)
 
 add_executable(proc-c-1 ${SOURCE_FILES})
