@@ -36,6 +36,9 @@ plane_st *PlaneInRand() {
 /// @param plane Pointer to the object being described.
 /// @param ofstream Output file stream.
 void PlaneOut(const plane_st *plane, FILE *ofstream) {
+    printf("maximum flight distance: %d, capacity: %d\n",
+            plane->max_distance, plane->capacity);
+
     fprintf(ofstream,
             "maximum flight distance: %d, capacity: %d\n",
              plane->max_distance, plane->capacity);

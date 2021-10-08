@@ -97,6 +97,7 @@ void Out(container_st *cont, FILE *ofstream) {
     }
 
     fprintf(ofstream, "Container contains %d elements.\n", cont->count);
+    printf("Container contains %d elements.\n", cont->count);
     for(int i = 0; i < cont->count; i++) {
         fprintf(ofstream, "%d: ", i + 1);
         TransportOut(cont->data[i], ofstream);

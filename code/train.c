@@ -34,5 +34,7 @@ train_st *TrainInRand() {
 /// @param train Pointer to the object being described.
 /// @param ofstream Output file stream.
 void TrainOut(const train_st *train, FILE *ofstream) {
+    printf("amount of cars: %d\n", train->car_amount);
+
     fprintf(ofstream, "amount of cars: %d\n", train->car_amount);
 }

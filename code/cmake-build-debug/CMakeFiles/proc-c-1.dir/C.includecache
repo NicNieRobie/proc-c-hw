@@ -6,27 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/parallels/Documents/Source files/C/proc-c-hw/code/container.c
-stdlib.h
--
-container.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/container.h
-string.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/string.h
-timer.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.h
-
-/home/parallels/Documents/Source files/C/proc-c-hw/code/container.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/container.h
 transport.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/transport.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/transport.h
 
-/home/parallels/Documents/Source files/C/proc-c-hw/code/file_read.c
-file_read.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/file_read.h
-timer.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.h
-
-/home/parallels/Documents/Source files/C/proc-c-hw/code/file_read.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/file_read.h
 stdio.h
 -
 stdlib.h
@@ -36,7 +20,7 @@ string.h
 time.h
 -
 
-/home/parallels/Documents/Source files/C/proc-c-hw/code/main.c
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/main.c
 stdio.h
 -
 stdlib.h
@@ -46,81 +30,47 @@ time.h
 string.h
 -
 container.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/container.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/container.h
 test_generation.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/test_generation.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/test_generation.h
 timer.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/timer.h
 
-/home/parallels/Documents/Source files/C/proc-c-hw/code/plane.c
-transport.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/transport.h
-timer.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.h
-
-/home/parallels/Documents/Source files/C/proc-c-hw/code/plane.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/plane.h
 stdio.h
 -
 
-/home/parallels/Documents/Source files/C/proc-c-hw/code/rnd.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/rnd.h
 
-/home/parallels/Documents/Source files/C/proc-c-hw/code/ship.c
-transport.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/transport.h
-timer.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.h
-
-/home/parallels/Documents/Source files/C/proc-c-hw/code/ship.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/ship.h
 stdio.h
 -
 
-/home/parallels/Documents/Source files/C/proc-c-hw/code/test_generation.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/test_generation.h
 stdio.h
 -
 stdlib.h
 -
 rnd.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/rnd.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/rnd.h
 
-/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.c
-timer.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.h
-stdio.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/stdio.h
-
-/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/timer.h
 time.h
 -
 
-/home/parallels/Documents/Source files/C/proc-c-hw/code/train.c
-transport.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/transport.h
-timer.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.h
-
-/home/parallels/Documents/Source files/C/proc-c-hw/code/train.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/train.h
 stdio.h
 -
 
-/home/parallels/Documents/Source files/C/proc-c-hw/code/transport.c
-stdlib.h
--
-string.h
--
-transport.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/transport.h
-timer.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.h
-
-/home/parallels/Documents/Source files/C/proc-c-hw/code/transport.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/transport.h
 plane.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/plane.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/plane.h
 ship.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/ship.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/ship.h
 train.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/train.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/train.h
 rnd.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/rnd.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/rnd.h
 file_read.h
-/home/parallels/Documents/Source files/C/proc-c-hw/code/file_read.h
+/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/file_read.h
 

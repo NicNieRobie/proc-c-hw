@@ -56,6 +56,9 @@ void ShipOut(const ship_st *ship, FILE *ofstream) {
             break;
     }
 
+    printf("ship type: %s, displacement: %d\n",
+            shipType, ship->displacement);
+
     fprintf(ofstream, "ship type: %s, displacement: %d\n",
             shipType, ship->displacement);
 }

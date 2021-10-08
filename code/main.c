@@ -122,7 +122,10 @@ int main(int argc, char* argv[]) {
 
     Out(&c, ofstream);
     DeleteLessThanAverage(&c);
+
+    printf("\n\nAfter the function call:\n");
     fprintf(ofstream, "\n\nAfter the function call:\n");
+
     Out(&c, ofstream);
 
     Clear(&c);

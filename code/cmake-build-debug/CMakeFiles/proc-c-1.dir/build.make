@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/164/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/164/bin/cmake/linux/bin/cmake -E rm -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/parallels/Documents/Source files/C/proc-c-hw/code"
+CMAKE_SOURCE_DIR = /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/proc-c-1.dir/depend.make
@@ -68,133 +68,133 @@ include CMakeFiles/proc-c-1.dir/flags.make
 
 CMakeFiles/proc-c-1.dir/transport.c.o: CMakeFiles/proc-c-1.dir/flags.make
 CMakeFiles/proc-c-1.dir/transport.c.o: ../transport.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/proc-c-1.dir/transport.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/transport.c.o -c "/home/parallels/Documents/Source files/C/proc-c-hw/code/transport.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/proc-c-1.dir/transport.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/transport.c.o -c /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/transport.c
 
 CMakeFiles/proc-c-1.dir/transport.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc-c-1.dir/transport.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/parallels/Documents/Source files/C/proc-c-hw/code/transport.c" > CMakeFiles/proc-c-1.dir/transport.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/transport.c > CMakeFiles/proc-c-1.dir/transport.c.i
 
 CMakeFiles/proc-c-1.dir/transport.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc-c-1.dir/transport.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/parallels/Documents/Source files/C/proc-c-hw/code/transport.c" -o CMakeFiles/proc-c-1.dir/transport.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/transport.c -o CMakeFiles/proc-c-1.dir/transport.c.s
 
 CMakeFiles/proc-c-1.dir/plane.c.o: CMakeFiles/proc-c-1.dir/flags.make
 CMakeFiles/proc-c-1.dir/plane.c.o: ../plane.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/proc-c-1.dir/plane.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/plane.c.o -c "/home/parallels/Documents/Source files/C/proc-c-hw/code/plane.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/proc-c-1.dir/plane.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/plane.c.o -c /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/plane.c
 
 CMakeFiles/proc-c-1.dir/plane.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc-c-1.dir/plane.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/parallels/Documents/Source files/C/proc-c-hw/code/plane.c" > CMakeFiles/proc-c-1.dir/plane.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/plane.c > CMakeFiles/proc-c-1.dir/plane.c.i
 
 CMakeFiles/proc-c-1.dir/plane.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc-c-1.dir/plane.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/parallels/Documents/Source files/C/proc-c-hw/code/plane.c" -o CMakeFiles/proc-c-1.dir/plane.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/plane.c -o CMakeFiles/proc-c-1.dir/plane.c.s
 
 CMakeFiles/proc-c-1.dir/train.c.o: CMakeFiles/proc-c-1.dir/flags.make
 CMakeFiles/proc-c-1.dir/train.c.o: ../train.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/proc-c-1.dir/train.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/train.c.o -c "/home/parallels/Documents/Source files/C/proc-c-hw/code/train.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/proc-c-1.dir/train.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/train.c.o -c /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/train.c
 
 CMakeFiles/proc-c-1.dir/train.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc-c-1.dir/train.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/parallels/Documents/Source files/C/proc-c-hw/code/train.c" > CMakeFiles/proc-c-1.dir/train.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/train.c > CMakeFiles/proc-c-1.dir/train.c.i
 
 CMakeFiles/proc-c-1.dir/train.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc-c-1.dir/train.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/parallels/Documents/Source files/C/proc-c-hw/code/train.c" -o CMakeFiles/proc-c-1.dir/train.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/train.c -o CMakeFiles/proc-c-1.dir/train.c.s
 
 CMakeFiles/proc-c-1.dir/ship.c.o: CMakeFiles/proc-c-1.dir/flags.make
 CMakeFiles/proc-c-1.dir/ship.c.o: ../ship.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/proc-c-1.dir/ship.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/ship.c.o -c "/home/parallels/Documents/Source files/C/proc-c-hw/code/ship.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/proc-c-1.dir/ship.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/ship.c.o -c /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/ship.c
 
 CMakeFiles/proc-c-1.dir/ship.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc-c-1.dir/ship.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/parallels/Documents/Source files/C/proc-c-hw/code/ship.c" > CMakeFiles/proc-c-1.dir/ship.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/ship.c > CMakeFiles/proc-c-1.dir/ship.c.i
 
 CMakeFiles/proc-c-1.dir/ship.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc-c-1.dir/ship.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/parallels/Documents/Source files/C/proc-c-hw/code/ship.c" -o CMakeFiles/proc-c-1.dir/ship.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/ship.c -o CMakeFiles/proc-c-1.dir/ship.c.s
 
 CMakeFiles/proc-c-1.dir/container.c.o: CMakeFiles/proc-c-1.dir/flags.make
 CMakeFiles/proc-c-1.dir/container.c.o: ../container.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/proc-c-1.dir/container.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/container.c.o -c "/home/parallels/Documents/Source files/C/proc-c-hw/code/container.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/proc-c-1.dir/container.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/container.c.o -c /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/container.c
 
 CMakeFiles/proc-c-1.dir/container.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc-c-1.dir/container.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/parallels/Documents/Source files/C/proc-c-hw/code/container.c" > CMakeFiles/proc-c-1.dir/container.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/container.c > CMakeFiles/proc-c-1.dir/container.c.i
 
 CMakeFiles/proc-c-1.dir/container.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc-c-1.dir/container.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/parallels/Documents/Source files/C/proc-c-hw/code/container.c" -o CMakeFiles/proc-c-1.dir/container.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/container.c -o CMakeFiles/proc-c-1.dir/container.c.s
 
 CMakeFiles/proc-c-1.dir/main.c.o: CMakeFiles/proc-c-1.dir/flags.make
 CMakeFiles/proc-c-1.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/proc-c-1.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/main.c.o -c "/home/parallels/Documents/Source files/C/proc-c-hw/code/main.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/proc-c-1.dir/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/main.c.o -c /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/main.c
 
 CMakeFiles/proc-c-1.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc-c-1.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/parallels/Documents/Source files/C/proc-c-hw/code/main.c" > CMakeFiles/proc-c-1.dir/main.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/main.c > CMakeFiles/proc-c-1.dir/main.c.i
 
 CMakeFiles/proc-c-1.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc-c-1.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/parallels/Documents/Source files/C/proc-c-hw/code/main.c" -o CMakeFiles/proc-c-1.dir/main.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/main.c -o CMakeFiles/proc-c-1.dir/main.c.s
 
 CMakeFiles/proc-c-1.dir/rnd.c.o: CMakeFiles/proc-c-1.dir/flags.make
 CMakeFiles/proc-c-1.dir/rnd.c.o: ../rnd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/proc-c-1.dir/rnd.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/rnd.c.o -c "/home/parallels/Documents/Source files/C/proc-c-hw/code/rnd.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/proc-c-1.dir/rnd.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/rnd.c.o -c /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/rnd.c
 
 CMakeFiles/proc-c-1.dir/rnd.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc-c-1.dir/rnd.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/parallels/Documents/Source files/C/proc-c-hw/code/rnd.c" > CMakeFiles/proc-c-1.dir/rnd.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/rnd.c > CMakeFiles/proc-c-1.dir/rnd.c.i
 
 CMakeFiles/proc-c-1.dir/rnd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc-c-1.dir/rnd.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/parallels/Documents/Source files/C/proc-c-hw/code/rnd.c" -o CMakeFiles/proc-c-1.dir/rnd.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/rnd.c -o CMakeFiles/proc-c-1.dir/rnd.c.s
 
 CMakeFiles/proc-c-1.dir/test_generation.c.o: CMakeFiles/proc-c-1.dir/flags.make
 CMakeFiles/proc-c-1.dir/test_generation.c.o: ../test_generation.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/proc-c-1.dir/test_generation.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/test_generation.c.o -c "/home/parallels/Documents/Source files/C/proc-c-hw/code/test_generation.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/proc-c-1.dir/test_generation.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/test_generation.c.o -c /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/test_generation.c
 
 CMakeFiles/proc-c-1.dir/test_generation.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc-c-1.dir/test_generation.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/parallels/Documents/Source files/C/proc-c-hw/code/test_generation.c" > CMakeFiles/proc-c-1.dir/test_generation.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/test_generation.c > CMakeFiles/proc-c-1.dir/test_generation.c.i
 
 CMakeFiles/proc-c-1.dir/test_generation.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc-c-1.dir/test_generation.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/parallels/Documents/Source files/C/proc-c-hw/code/test_generation.c" -o CMakeFiles/proc-c-1.dir/test_generation.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/test_generation.c -o CMakeFiles/proc-c-1.dir/test_generation.c.s
 
 CMakeFiles/proc-c-1.dir/file_read.c.o: CMakeFiles/proc-c-1.dir/flags.make
 CMakeFiles/proc-c-1.dir/file_read.c.o: ../file_read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/proc-c-1.dir/file_read.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/file_read.c.o -c "/home/parallels/Documents/Source files/C/proc-c-hw/code/file_read.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/proc-c-1.dir/file_read.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/file_read.c.o -c /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/file_read.c
 
 CMakeFiles/proc-c-1.dir/file_read.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc-c-1.dir/file_read.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/parallels/Documents/Source files/C/proc-c-hw/code/file_read.c" > CMakeFiles/proc-c-1.dir/file_read.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/file_read.c > CMakeFiles/proc-c-1.dir/file_read.c.i
 
 CMakeFiles/proc-c-1.dir/file_read.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc-c-1.dir/file_read.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/parallels/Documents/Source files/C/proc-c-hw/code/file_read.c" -o CMakeFiles/proc-c-1.dir/file_read.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/file_read.c -o CMakeFiles/proc-c-1.dir/file_read.c.s
 
 CMakeFiles/proc-c-1.dir/timer.c.o: CMakeFiles/proc-c-1.dir/flags.make
 CMakeFiles/proc-c-1.dir/timer.c.o: ../timer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/proc-c-1.dir/timer.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/timer.c.o -c "/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/proc-c-1.dir/timer.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/proc-c-1.dir/timer.c.o -c /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/timer.c
 
 CMakeFiles/proc-c-1.dir/timer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/proc-c-1.dir/timer.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.c" > CMakeFiles/proc-c-1.dir/timer.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/timer.c > CMakeFiles/proc-c-1.dir/timer.c.i
 
 CMakeFiles/proc-c-1.dir/timer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/proc-c-1.dir/timer.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/parallels/Documents/Source files/C/proc-c-hw/code/timer.c" -o CMakeFiles/proc-c-1.dir/timer.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/timer.c -o CMakeFiles/proc-c-1.dir/timer.c.s
 
 # Object files for target proc-c-1
 proc__c__1_OBJECTS = \
@@ -224,7 +224,7 @@ proc__c__1_EXTERNAL_OBJECTS =
 ../bin/proc-c-1: CMakeFiles/proc-c-1.dir/timer.c.o
 ../bin/proc-c-1: CMakeFiles/proc-c-1.dir/build.make
 ../bin/proc-c-1: CMakeFiles/proc-c-1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable ../bin/proc-c-1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable ../bin/proc-c-1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/proc-c-1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -236,6 +236,6 @@ CMakeFiles/proc-c-1.dir/clean:
 .PHONY : CMakeFiles/proc-c-1.dir/clean
 
 CMakeFiles/proc-c-1.dir/depend:
-	cd "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/parallels/Documents/Source files/C/proc-c-hw/code" "/home/parallels/Documents/Source files/C/proc-c-hw/code" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug" "/home/parallels/Documents/Source files/C/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug /Users/vlad/Desktop/proc-c-hw/proc-c-hw/code/cmake-build-debug/CMakeFiles/proc-c-1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/proc-c-1.dir/depend
 

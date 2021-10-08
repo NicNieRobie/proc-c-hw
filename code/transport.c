@@ -86,6 +86,12 @@ void TransportOut(const transport_st *tr, FILE *ofstream) {
     double timeToDest = TimeToDest(tr);
     switch (tr->transport_type) {
         case PLANE:
+            printf("This is a plane. Speed: %d, "
+                              "distance to destination: %f, "
+                              "time to distance: %f, ",
+                              tr->speed, tr->dest_distance,
+                              timeToDest);
+
             fprintf(ofstream, "This is a plane. Speed: %d, "
                               "distance to destination: %f, "
                               "time to distance: %f, ",
@@ -94,6 +100,12 @@ void TransportOut(const transport_st *tr, FILE *ofstream) {
             PlaneOut(&tr->p, ofstream);
             break;
         case SHIP:
+            printf("This is a ship. Speed: %d, "
+                              "distance to destination: %f, "
+                              "time to distance: %f, ",
+                              tr->speed, tr->dest_distance,
+                              timeToDest);
+
             fprintf(ofstream, "This is a ship. Speed: %d, "
                               "distance to destination: %f, "
                               "time to distance: %f, ",
@@ -102,6 +114,12 @@ void TransportOut(const transport_st *tr, FILE *ofstream) {
             ShipOut(&tr->s, ofstream);
             break;
         case TRAIN:
+            printf("This is a train. Speed: %d, "
+                              "distance to destination: %f, "
+                              "time to distance: %f, ",
+                              tr->speed, tr->dest_distance,
+                              timeToDest);
+
             fprintf(ofstream, "This is a train. Speed: %d, "
                               "distance to destination: %f, "
                               "time to distance: %f, ",
