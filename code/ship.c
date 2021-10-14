@@ -1,5 +1,5 @@
 /*-------------------------------- ship.c ---------------------------------
- * Plane data type functionality definition.
+ * Ship data type functionality definition.
  *-------------------------------------------------------------------------*/
 
 #include "transport.h"
